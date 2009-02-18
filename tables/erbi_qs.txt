@@ -11,7 +11,7 @@ BEGIN_DEFINITION
 
 ### An unique id to distinguish this table among others.
 ### Use uuidgen to generate this kind of id.
-UUID = cc952910-be17-4342-9638-3759623b94a9
+UUID = cc992910-be17-4342-9631-3759623b94a9
 
 ### A unique number indicates the version of this file.
 ### For example the last modified date of this file.
@@ -59,6 +59,7 @@ PINYIN_MODE = TRUE
 ### If true then the phrases' frequencies will be adjusted dynamically
 ### according your using frequency.
 DYNAMIC_ADJUST = TRUE 
+LAYOUT = us
 
 ### Rules to construct user define phrase
 RULES = ce2:p11+p12+p21+p22;ce3:p11+p12+p21+p31;ca4:p11+p21+p31+p-11
