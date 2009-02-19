@@ -29,18 +29,14 @@ createdb += -e @IBUS_TABLE_EXTRAPHRASE@
 endif
 
 tables_DATA =
-engine_DATA =
 
 if IBUS_TABLE_BUILD_ERBI_QS
 tables_DATA += erbi_qs.db
-engine_DATA += erbi_qs.engine
 endif
 
 tables_DATA += $(NULL)
-engine_DATA += $(NULL)
 
 tablesdir = $(datadir)/ibus-table/tables
-enginedir = $(datadir)/ibus/engine
 
 EXTRA_DIST = \
 	erbi_qs.txt \
@@ -48,11 +44,8 @@ EXTRA_DIST = \
 
 DISTCLEANFILES = \
 	*.db \
-	*.engine \
 	$(NULL)
 
-.db.engine:
-	@echo "$@ is done:)"
 
 .txt.db:
 	$(createdb) -n $@ -s $<
